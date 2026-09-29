@@ -1,0 +1,63 @@
+name: release
+
+# A tag per client build is what makes this repository pinnable: `main` moves, a tag does not,
+# so a consumer that needs reproducibility fetches `v1.32.020.344269` and gets those exact
+# bytes forever.
+#
+# Fires when VERSION changes on main - i.e. after an updates-* pull request merges. It is
+# idempotent: if the tag already exists it says so and stops, so a re-run or a manual dispatch
+# never rewrites a published tag.
+on:
+  push:
+    branches: [main]
+    paths: ["VERSION"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    name: tag and release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Tag the build and cut the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          version=$(cat VERSION | tr -d '[:space:]')
+          tag="v$version"
+          if git rev-parse -q --verify "refs/tags/$tag" >/dev/null || \
+             gh release view "$tag" >/dev/null 2>&1; then
+            echo "$tag already exists - nothing to do"
+            exit 0
+          fi
+
+          files=$(python3 -c "import json;print(len(json.load(open('manifest.json'))['files']))")
+          # What changed since the previous tag, for people who read releases instead of diffs.
+          prev=$(git tag --sort=-v:refname | grep -v "^$tag$" | head -1 || true)
+          if [ -n "$prev" ]; then
+            changed=$(git diff --name-only "$prev" HEAD -- gamedata/ | wc -l | tr -d ' ')
+            notes="**$files XML files** decoded from client \`$version\`.
+
+          $changed file(s) changed since [\`$prev\`](../../releases/tag/$prev).
+
+          \`\`\`
+          git diff $prev $tag -- gamedata/
+          \`\`\`"
+          else
+            notes="**$files XML files** decoded from client \`$version\`. First published build."
+          fi
+          notes="$notes
+
+          Every file's sha256 is in \`manifest.json\`. Unofficial, not affiliated with Sandbox
+          Interactive - see [NOTICE.md](../../blob/main/NOTICE.md)."
+
+          git tag -a "$tag" -m "client $version"
+          git push origin "$tag"
+          gh release create "$tag" --title "$tag" --notes "$notes"
+          echo "released $tag"

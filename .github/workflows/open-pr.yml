@@ -25,8 +25,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           BRANCH: ${{ github.ref_name }}
+        # NEVER let this job fail.
+        #
+        # A red check run - any red check run, required or not - leaves the pull request in
+        # GitHub's UNSTABLE state, and auto-merge only fires on CLEAN. So a failure here does
+        # not merely skip opening the PR: it deadlocks the merge of a publish that `validate`
+        # has already passed. This job arranges the merge; it must never become the reason the
+        # merge cannot happen. It says loudly what went wrong and exits 0.
+        continue-on-error: true
         run: |
-          set -euo pipefail
+          set -uo pipefail
           version=$(tr -d '[:space:]' < VERSION)
 
           # `gh pr create` prints the PR URL and has no --json; `gh pr merge` takes that URL
@@ -43,7 +51,16 @@ jobs:
               echo "is green, and never if it is red."
             } > /tmp/pr-body.md
             url=$(gh pr create --base main --head "$BRANCH" \
-              --title "client $version" --body-file /tmp/pr-body.md)
+              --title "client $version" --body-file /tmp/pr-body.md) || url=""
+            if [ -z "$url" ]; then
+              echo "::warning::Could not open the pull request. If the message above says"
+              echo "::warning::'GitHub Actions is not permitted to create or approve pull"
+              echo "::warning::requests', that is an ORGANISATION setting, not a bug here:"
+              echo "::warning::Settings > Actions > General > Workflow permissions. Until it"
+              echo "::warning::is on, open the PR by hand for branch $BRANCH - validate has"
+              echo "::warning::already checked the bytes and still gates the merge."
+              exit 0
+            fi
             echo "opened $url"
           fi
 
@@ -54,5 +71,10 @@ jobs:
           # Squash, not a merge commit. `main` requires linear history so that one client build
           # is one commit: `git diff v1.32.010 v1.32.020` then means exactly what it looks like,
           # and bisecting a data regression walks builds rather than merge bubbles.
-          gh pr merge "$url" --auto --squash
-          echo "auto-merge armed on $url"
+          if gh pr merge "$url" --auto --squash; then
+            echo "auto-merge armed on $url"
+          else
+            echo "::warning::Could not arm auto-merge on $url - merge it by hand once validate"
+            echo "::warning::is green. Check that 'Allow auto-merge' is on and that main is"
+            echo "::warning::protected with validate as a required check."
+          fi

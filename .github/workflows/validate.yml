@@ -1,0 +1,48 @@
+name: validate
+
+# Runs on the PUSH as well as on the pull request, and that is load-bearing.
+#
+# A pull request opened by GITHUB_TOKEN does not trigger `pull_request` workflows - GitHub
+# suppresses it to stop workflows looping. Our PRs are opened that way (see open-pr.yml), so
+# if `validate` only ran on `pull_request` it would never report, the required check would
+# never go green, and auto-merge would wait forever.
+#
+# Required status checks are attached to a COMMIT, not to an event. Running on the push to
+# `updates-**` attaches the result to the same SHA the pull request carries, which satisfies
+# the branch protection on `main`. The `pull_request` trigger stays for anything a human
+# opens by hand.
+on:
+  push:
+    branches: ["updates-**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # The base VERSION is needed to prove this build advances on the published one, and
+          # a shallow clone of one branch cannot see it.
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Read the published VERSION
+        id: base
+        run: |
+          base=$(git show origin/main:VERSION 2>/dev/null | tr -d '[:space:]' || true)
+          echo "version=$base" >> "$GITHUB_OUTPUT"
+          echo "published: ${base:-<none, first publish>}"
+      - name: Validate the committed bytes
+        run: python3 .github/validate.py --base-version "${{ steps.base.outputs.version }}"

@@ -1,0 +1,51 @@
+name: open-pr
+
+# The box pushes `updates-<version>` and stops there. It holds a DEPLOY KEY, which can do git
+# and nothing else - no API, so it cannot open a pull request, which is the point. A leaked
+# publish credential has to mean "someone can push data that is already public", never
+# "someone can act as us on GitHub".
+#
+# So the repository opens its own pull request, with the built-in GITHUB_TOKEN, and turns on
+# auto-merge. Nobody has to act for a good publish to land; nothing lands if `validate` is red.
+on:
+  push:
+    branches: ["updates-**"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  open:
+    name: open the pull request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Open it, or reuse the one that is already open
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          version=$(cat VERSION | tr -d '[:space:]')
+          existing=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number' || true)
+          if [ -n "$existing" ]; then
+            echo "PR #$existing already open for $BRANCH"
+            number=$existing
+          else
+            body=$(git log -1 --pretty=%b)
+            number=$(gh pr create \
+              --base main --head "$BRANCH" \
+              --title "client $version" \
+              --body "$body
+
+            Opened automatically. \`validate\` re-checks the committed bytes; auto-merge lands it
+            when that is green. If it is red, this pull request stays open and nothing is
+            published." \
+              --json number --jq .number 2>/dev/null || gh pr view "$BRANCH" --json number --jq .number)
+          fi
+          # Auto-merge is a request, not a merge: GitHub performs it once the required check
+          # passes. It fails loudly if branch protection or the repo setting is missing, which
+          # is the failure we want to see rather than a silent direct merge.
+          gh pr merge "$number" --auto --merge
+          echo "auto-merge armed on #$number"

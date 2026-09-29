@@ -67,13 +67,13 @@ not, and are skipped rather than guessed at.
 **It is not a mirror of [ao-bin-dumps](https://github.com/ao-data/ao-bin-dumps)**, and should
 not be used as a drop-in replacement for it. Measured 2026-09-29:
 
-|                                              | files |
-| -------------------------------------------- | ----- |
-| ao-bin-dumps                                  | 203   |
-| here                                          | 145   |
-| in ao-bin-dumps, not here                     | 59    |
-| ...of those, present in the client download   | 0     |
-| here, not in ao-bin-dumps                     | 1     |
+|                                             | files |
+| ------------------------------------------- | ----- |
+| ao-bin-dumps                                | 203   |
+| here                                        | 145   |
+| in ao-bin-dumps, not here                   | 59    |
+| ...of those, present in the client download | 0     |
+| here, not in ao-bin-dumps                   | 1     |
 
 Those 59 are all `_asia` / `_europe` / `_patch` variants, and none of them has a `.bin` in the
 downloadable client - they come off the live servers, which this pipeline never touches. The

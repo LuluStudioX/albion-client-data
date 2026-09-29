@@ -27,23 +27,26 @@ jobs:
           BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
-          version=$(cat VERSION | tr -d '[:space:]')
-          existing=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number' || true)
-          if [ -n "$existing" ]; then
-            echo "PR #$existing already open for $BRANCH"
-            number=$existing
-          else
-            body=$(git log -1 --pretty=%b)
-            number=$(gh pr create \
-              --base main --head "$BRANCH" \
-              --title "client $version" \
-              --body "$body
+          version=$(tr -d '[:space:]' < VERSION)
 
-            Opened automatically. \`validate\` re-checks the committed bytes; auto-merge lands it
-            when that is green. If it is red, this pull request stays open and nothing is
-            published." \
-              --json number --jq .number 2>/dev/null || gh pr view "$BRANCH" --json number --jq .number)
+          # `gh pr create` prints the PR URL and has no --json; `gh pr merge` takes that URL
+          # as happily as a number, so the URL is what travels between the two.
+          url=$(gh pr list --head "$BRANCH" --state open --json url --jq '.[0].url // empty')
+          if [ -n "$url" ]; then
+            echo "reusing the pull request already open for $BRANCH: $url"
+          else
+            {
+              git log -1 --pretty=%b
+              echo
+              echo "Opened automatically by \`open-pr.yml\`. The \`validate\` check re-derives"
+              echo "every hash from the committed bytes; auto-merge lands this the moment that"
+              echo "is green, and never if it is red."
+            } > /tmp/pr-body.md
+            url=$(gh pr create --base main --head "$BRANCH" \
+              --title "client $version" --body-file /tmp/pr-body.md)
+            echo "opened $url"
           fi
+
           # Auto-merge is a request, not a merge: GitHub performs it once the required check
           # passes. It fails loudly if branch protection or the repo setting is missing, which
           # is the failure we want to see rather than a silent direct merge.
@@ -51,5 +54,5 @@ jobs:
           # Squash, not a merge commit. `main` requires linear history so that one client build
           # is one commit: `git diff v1.32.010 v1.32.020` then means exactly what it looks like,
           # and bisecting a data regression walks builds rather than merge bubbles.
-          gh pr merge "$number" --auto --squash
-          echo "auto-merge armed on #$number"
+          gh pr merge "$url" --auto --squash
+          echo "auto-merge armed on $url"

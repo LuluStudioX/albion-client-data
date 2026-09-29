@@ -1,0 +1,587 @@
+{
+ "decoder": "tools/ao-data/decode-gamedata.mjs",
+ "files": {
+  "accessrights.xml": {
+   "bytes": 22610,
+   "sha256": "759b00f1898b025b6f9854b41e6cccbacb0dba40d2730af0ec3f8077b578c6a8"
+  },
+  "achievements.xml": {
+   "bytes": 1615400,
+   "sha256": "f55ba6e09c5928ba4d405bc94b342272fe3b25c9099b78b608dd66fcee527f1d"
+  },
+  "advertisementpopups.xml": {
+   "bytes": 49973,
+   "sha256": "de5963e82d396fc69cf5c753fe88d6c88392292087ff0380a5bc263cf92f1b94"
+  },
+  "albionjournal.xml": {
+   "bytes": 1961264,
+   "sha256": "99237299411a4e7d60232836e5e557386ad35e414cfbaa0f6e56203b50f2c634"
+  },
+  "albionjournalquests.xml": {
+   "bytes": 87625,
+   "sha256": "96878b0a0a2986a7e618545546b9cf8b5bb4468d925e42c959445b1596320064"
+  },
+  "animationdata.xml": {
+   "bytes": 1019,
+   "sha256": "bdf373059062555cdb69a5c999bc2752fe9fa1029a9f4f12483ffd88a5fe1d71"
+  },
+  "animationtypes.xml": {
+   "bytes": 18643,
+   "sha256": "12d9c3b47a46ea8a75a05758d5c6b6ce9da36c2075079a1df9658bc690afafb7"
+  },
+  "arena.xml": {
+   "bytes": 180739,
+   "sha256": "99709f4f0b801c4ae1c3b943bccee67754e8ade871c1b2c3e1bce6724994a949"
+  },
+  "arena_asia.xml": {
+   "bytes": 177899,
+   "sha256": "6d300c465403fba1588ffa21761096690bc7b29e009de79309f97e3b8fac379f"
+  },
+  "arena_europe.xml": {
+   "bytes": 177029,
+   "sha256": "6127b76182ff4fc984ce836cb6b1565a1d1e1bba5795b4033ee7ad645f29234f"
+  },
+  "armory.xml": {
+   "bytes": 33593,
+   "sha256": "ac77a595e8c516529c92c493459337ad8da13288b939f3f006611a987b67ef17"
+  },
+  "assetvfx.xml": {
+   "bytes": 291059,
+   "sha256": "a6cdb6aa392cde0c2a6ffbda3d8ae898473f2d3988c25a90de2a23295c250800"
+  },
+  "audio.xml": {
+   "bytes": 514668,
+   "sha256": "3ed9a126a6e10cf2bea22e9a360af9433c57c856017fd047a7386d6434196350"
+  },
+  "avatars.xml": {
+   "bytes": 39680,
+   "sha256": "bb1ff13ee299ef8999e36a4122ae7db787583e6ad903451274cb1dcdbe9218ce"
+  },
+  "avatars_asia.xml": {
+   "bytes": 39946,
+   "sha256": "5d216f87580749cab7bea9169ec40bec1296f778b21ab84530c83ebe5210509f"
+  },
+  "buffshrines.xml": {
+   "bytes": 15630,
+   "sha256": "0ee49c039a3cffe053a67246203920b3e1c1b0a253e93c69a9a5973330b8d507"
+  },
+  "buildings.xml": {
+   "bytes": 1573383,
+   "sha256": "fbff4e450ab213d4687d1756def590e4ebcee43b3ea0f0e94f697b6d8b3096f4"
+  },
+  "cagedobjects.xml": {
+   "bytes": 3929,
+   "sha256": "6b41df63b5b3188d07f8812af0a1db7eb3ce30a527b975b523d55619e721121d"
+  },
+  "carriables.xml": {
+   "bytes": 37789,
+   "sha256": "9ef853f6b21a699be34b191e55a6738f27d5fbdde1215ce09b0deaaf5905cca0"
+  },
+  "castles.xml": {
+   "bytes": 7751,
+   "sha256": "248c98ebfb019a8861636f5add1287577bc22add11db8beb5e0d71b2f4126335"
+  },
+  "characters.xml": {
+   "bytes": 44033,
+   "sha256": "1fa21ce88e1d626a5fd479cb850df1a3757991be8ed04120ba8651920fb8b5f5"
+  },
+  "chatsettings.xml": {
+   "bytes": 4666,
+   "sha256": "9e623b8e89fdc4121137dc3a944f83c33b8cfdfb2e2233d4ade975a0844a798d"
+  },
+  "corrupteddungeons.xml": {
+   "bytes": 5430,
+   "sha256": "46b2a3bb1b0a42b1b677754099aaa31bd5108cd61edbcf3ed2874db6c4b5445b"
+  },
+  "craftingmodifiers.xml": {
+   "bytes": 63330,
+   "sha256": "85dadee62cfa30bb4e2459891b6d2d4e272d2801372f3ac73b36c9364c5e730a"
+  },
+  "crystalleague.xml": {
+   "bytes": 712192,
+   "sha256": "05f2fc1687b527f5bfebef65e81f411dd17d49d73193ef1551a3b9263f797d67"
+  },
+  "crystalleague_asia.xml": {
+   "bytes": 697713,
+   "sha256": "5b42951dcabc946fa09012d3acc073ff9c518e95ee339e9bcfd0f7a401a8a042"
+  },
+  "crystalleague_europe.xml": {
+   "bytes": 697260,
+   "sha256": "31bbe2d4dadac61205fe41f2d98a7104052a02eeb31c9247f565b812c12d07e9"
+  },
+  "crystalrealmgvg.xml": {
+   "bytes": 3374,
+   "sha256": "c3a8c7e66b9e68175f578a87486ef63655b88d117e97dc9107cf13731da8e337"
+  },
+  "currencies.xml": {
+   "bytes": 1407,
+   "sha256": "b79bb6ace6f1670358207ed928f359b8f5dbee11d7bdba6fc72f92ddec8e2704"
+  },
+  "dragonarea.xml": {
+   "bytes": 34094,
+   "sha256": "07b7b34824d0eecb6a3e5d1a25fe5ff28abdc883a1341cff7a4e5a965f76ea82"
+  },
+  "dragonareatemplatemetadata.xml": {
+   "bytes": 8500,
+   "sha256": "06b5e136d229282cc99c9b2fd9444857f3d25d4d6af1cc337c98982814ffb867"
+  },
+  "dynamicclusters.xml": {
+   "bytes": 188250,
+   "sha256": "b2f526eb739fb61f4453714ccc315a04a80a5894730ff4a8c7abb45182df5035"
+  },
+  "dynamichunt.xml": {
+   "bytes": 425804,
+   "sha256": "5ac362c4461c3886c2373bf8f26bcecbdb44f4d950eb6c61ebb4121c8674ec9d"
+  },
+  "dynamictemplates.xml": {
+   "bytes": 326875,
+   "sha256": "af6c88e7e81ed56453c127c73738ff8421e32aff14a195ec23a5e453fce38e6f"
+  },
+  "emotes.xml": {
+   "bytes": 6246,
+   "sha256": "66288a110566f6213b94c1560ba8035b0dd99ae80734d3c9c82a142f904fb9d5"
+  },
+  "eventbasedpopups.xml": {
+   "bytes": 40069,
+   "sha256": "a5fc7a45365d66f5b2e70260555efde16ba304e10cf937f1b795a5a8b3b58bf9"
+  },
+  "expeditionagents.xml": {
+   "bytes": 2952,
+   "sha256": "e393081510a6076b8f0316b9334870c5a9b14b85a53501fb7e11a2ae3919868e"
+  },
+  "expeditioncategories.xml": {
+   "bytes": 10597,
+   "sha256": "0a7f6515ab164d66fbf45e4166e750bff024f64554303a0822b21cab62786a3f"
+  },
+  "expeditions.xml": {
+   "bytes": 21239,
+   "sha256": "b8905c01ffb157a0f70cca70426dfc24a3bafa0ecd6ebb9db12995366fd5e09a"
+  },
+  "factionfortress.xml": {
+   "bytes": 12314,
+   "sha256": "a8491a52f751bfc22c858a80781701aa5317961fab71e91ee7e61464db15fa90"
+  },
+  "factionwarfare.xml": {
+   "bytes": 60813,
+   "sha256": "5efe2328b2911517ce86a7f8f227cb15af879a26099cd93b9ff4575e04a5cd0b"
+  },
+  "factionwarfareredzoneevent.xml": {
+   "bytes": 8623,
+   "sha256": "dcf9b28815bdcb25cee044637be117d71b7f07356a8eba78cf42bdd0bb9653fb"
+  },
+  "factionwarfareredzoneevent_asia.xml": {
+   "bytes": 8299,
+   "sha256": "0b5d465aaaa5d6fcbf57973aa7b6a31ac02f08ec71f9dfddfcca03fdc59e995a"
+  },
+  "factionwarfareredzoneevent_europe.xml": {
+   "bytes": 8490,
+   "sha256": "2c50a7cb5964aa86ccd77c6622c897d1ff9a34d67064d7163e870dd6a52939cb"
+  },
+  "farmingmodifiers.xml": {
+   "bytes": 62977,
+   "sha256": "249f55840ff1fb8739f414749736f1a6c1f0d1e62930dc5174ab4fb9d14b56b1"
+  },
+  "festivities.xml": {
+   "bytes": 39954,
+   "sha256": "d602741f7010b78ec44c6b7b2f55d531aa80b75a5d550c4940ed36858218ebdd"
+  },
+  "fortificationguards.xml": {
+   "bytes": 4777,
+   "sha256": "51a533ef99753df43611bc84be40207368036a0d6572d2c092f1c90f61098791"
+  },
+  "gamedata.xml": {
+   "bytes": 122786,
+   "sha256": "3af9112bb390c9c88fce8853e72c62484cffad22d46f2a908dc6bc9e441ab0c8"
+  },
+  "gamedata_asia.xml": {
+   "bytes": 119070,
+   "sha256": "1d52a6791e23364f824d8d2b9e8f997eb00982ad2aa45d33eeba617588b834b5"
+  },
+  "gamedata_europe.xml": {
+   "bytes": 119070,
+   "sha256": "a913a7934357768d8efdd91e50f84e37f0f78d5a218fda5da7542edaa377fc1c"
+  },
+  "guildfinder.xml": {
+   "bytes": 1158,
+   "sha256": "2c41f3884fb5c3380c541a881b148741e51a91a0b02ff32f0956dd2aefbff30c"
+  },
+  "guildfinder_asia.xml": {
+   "bytes": 1103,
+   "sha256": "f9038d3a63caf50212b14116b654c63ba08ac4ee441d0e7ed6b2f4811227adce"
+  },
+  "guildfinder_europe.xml": {
+   "bytes": 1103,
+   "sha256": "8476e9a80d7b20462cab78c0b480f513b87cc8b19334c65ae2578c68bf93ccba"
+  },
+  "guildlogos.xml": {
+   "bytes": 21633,
+   "sha256": "ec9395bcd5f19ca70056b59bd5b8bf463503552ea0f65261083e04d9b169d1ca"
+  },
+  "gvgseasons.xml": {
+   "bytes": 625034,
+   "sha256": "4b4a48691ea42eb8a29f97fb6489b80218acfe597f046d8046e59cacec9222cc"
+  },
+  "gvgseasons_asia.xml": {
+   "bytes": 293877,
+   "sha256": "de9702b22495d03aa7f9999564570abf8314e1ed0e0e6ca5e8b19b2046c2153b"
+  },
+  "gvgseasons_europe.xml": {
+   "bytes": 212930,
+   "sha256": "d4054e59c788cc96dd3fde326ac27a56644659e533f5f06d8b798d984ceee9e5"
+  },
+  "harvestables.xml": {
+   "bytes": 577904,
+   "sha256": "f856cf49d4a0142fe455d8ba48f3442a3957b6d0741096dac68f554bb983e64c"
+  },
+  "helldungeons.xml": {
+   "bytes": 17531,
+   "sha256": "38eaca967a79140b204c764079f410bc56089bacd2a0dec25519f15a26b0be2c"
+  },
+  "helldungeonstemplatemetadata.xml": {
+   "bytes": 9572,
+   "sha256": "0fc3e3e22498a2fdd29be67171f1c046e77630ea28b5457029e37f16049ee95b"
+  },
+  "hellgate.xml": {
+   "bytes": 18626,
+   "sha256": "389d0b641e47287adeb52609f489e9605303a0fb5fa3eb6b236535250ff7a999"
+  },
+  "hideouts.xml": {
+   "bytes": 7871,
+   "sha256": "51309e22f00eaff9aa33342f4fca8c7e73ecec5acd1c98554a726ebaa1759c41"
+  },
+  "hints.xml": {
+   "bytes": 161173,
+   "sha256": "e7e61eec6b9b0e6947fb0f269e609d21cc9a59cd1967fa2e91aa3afcc64e02a1"
+  },
+  "itemroles.xml": {
+   "bytes": 6714,
+   "sha256": "a6d1dd57085c0b8de1b912ec53ef9482407ba08cd0bf15b7e38fafd8469c72fc"
+  },
+  "items.xml": {
+   "bytes": 10789020,
+   "sha256": "142cd2a7d19add57c9d59f52df7c85121ef2f3d7055b5d6a0fd811ef45ad8893"
+  },
+  "killemotes.xml": {
+   "bytes": 4956,
+   "sha256": "2609595a550586728510d78960623abaab340e983289b7c16bfdfc0f98f632ce"
+  },
+  "killtrophy.xml": {
+   "bytes": 2135,
+   "sha256": "86bfa551cd606c0886c6690302900df7b8289ee5a921b9a5bedee8011830e5c9"
+  },
+  "legendaryitems.xml": {
+   "bytes": 16261,
+   "sha256": "01d7bac975799646349abdef7304c80b22620621909a271a5ab9091ca054b3d6"
+  },
+  "loadouts.xml": {
+   "bytes": 2798,
+   "sha256": "4a4fb17e01f318289884abef4688ba30a0b6c61117fe0b71b68dc7ff3738f953"
+  },
+  "localization.xml": {
+   "bytes": 78140048,
+   "sha256": "de6c55d9cf2e71fe329b713899f7c7116181a58c1b47585368c4731d9cea4070"
+  },
+  "localquests.xml": {
+   "bytes": 25049,
+   "sha256": "3564e56e8895bf60bba4637fc54e20326bd2fa16d9ba65c9beeb778122c95dcb"
+  },
+  "loginpopups.xml": {
+   "bytes": 8404,
+   "sha256": "350f72154014f4d8c0cb0f17747d8a6615ff052d82fc712710c9973782dfe5bb"
+  },
+  "loot.xml": {
+   "bytes": 2231153,
+   "sha256": "a0fee2b08dacbea488f118c3c0e9dc66816a120b6fac68f8c9b456aadbc76a33"
+  },
+  "lootchests.xml": {
+   "bytes": 1048118,
+   "sha256": "94267bc6ff91338f523c11508fd90153678c698b926ad1711f210270ae0f03dd"
+  },
+  "lore.xml": {
+   "bytes": 8538,
+   "sha256": "e18092a4c9e2435e1e806e6d0174efc9f85fff0191763e4cd4083259af92e0e4"
+  },
+  "matchtypes.xml": {
+   "bytes": 17443,
+   "sha256": "05abbd1192c587b7195a0f0dff96b73f13830f95994b008be9d501edbe434809"
+  },
+  "minimapgendata.xml": {
+   "bytes": 405684,
+   "sha256": "484a934f5982e374556ae8f18464ac035e4ea11f62048fa32a9f2b6ea7acd8f5"
+  },
+  "mists.xml": {
+   "bytes": 217048,
+   "sha256": "70014fe60a9194ea2dc3324e1c088d8e2f9ca4ee62857dcff79b401e2ab3cb1c"
+  },
+  "miststemplatemetadata.xml": {
+   "bytes": 73098,
+   "sha256": "e03f885aea7d4e833218459a8aabb7395c53244116c3f9ca233a36dd32908950"
+  },
+  "mobfactions.xml": {
+   "bytes": 1151,
+   "sha256": "5596c838ab16035aa845169670fb50347947e0a6e4d478c956b89191d77e31ea"
+  },
+  "mobilenotifications.xml": {
+   "bytes": 1547,
+   "sha256": "8fb0559fb9890bd2b8bbb5b8c5d6e339160f42e33813bd3ac070586294402e05"
+  },
+  "mobs.xml": {
+   "bytes": 12548428,
+   "sha256": "05aa045f91a312dce87e8b7e5529616d11a175dc95bbcc632e45084076df34dd"
+  },
+  "moderationpunishmentescalation.xml": {
+   "bytes": 18036,
+   "sha256": "cd5e195f6cb30b358e8e3b2edd214fd1fe34e370f649fb60d78e5db163b95c41"
+  },
+  "mountskins.xml": {
+   "bytes": 37430,
+   "sha256": "e41a1ed241266f36a5978e8e2a9260960f17c648023facb974e29af53af89b94"
+  },
+  "mountskins_asia.xml": {
+   "bytes": 33457,
+   "sha256": "050b26bf1b20c73effab89fe2e38b44baae832fd155ab6b5c7a3009751385dba"
+  },
+  "mountskins_europe.xml": {
+   "bytes": 33457,
+   "sha256": "6c8ba07ca4b18f00851e489a3b640de995ce7c30e44e671a5b0a96c23c831873"
+  },
+  "multirewardobjects.xml": {
+   "bytes": 2295,
+   "sha256": "a5bdac38512f1b20a3c3650bda0e7511d27ba2e529545e5190da99414e31c23c"
+  },
+  "namegenerators.xml": {
+   "bytes": 196119,
+   "sha256": "2da4289c6eec81a255de4c66cd50c35f3dbb9b67df91aad1825903a07fb3bee3"
+  },
+  "orbtypes.xml": {
+   "bytes": 6005,
+   "sha256": "e62e5e48b31432adaf99dcdaac24656c3a6d6d2a18e9f178e4752cc409bc5015"
+  },
+  "outlandsteleportationportals.xml": {
+   "bytes": 8996,
+   "sha256": "66acbbc5503fb80438878f41dd8108af724a9481be619f15cbf4341a336c8ecc"
+  },
+  "outpost.xml": {
+   "bytes": 15365,
+   "sha256": "7bec7e2661782998e495a9d15305af15cea03f81356ded2eed648ec09609589d"
+  },
+  "personalseasons.xml": {
+   "bytes": 37121,
+   "sha256": "3ad6962913396c40fa0c1be7d39fc6eb19a6615edb6e51713a6e502380c7fdc4"
+  },
+  "piledobjects.xml": {
+   "bytes": 9427,
+   "sha256": "e659230a9c0e5198c9ec870b1c2d5fdacb61185c1284c998d4ae464eaf8a0b65"
+  },
+  "placeholderspots.xml": {
+   "bytes": 11168,
+   "sha256": "658b8bc9283abbd5df43ad18f573acac358b135be95bcbe4fdff4bd75b406b04"
+  },
+  "placeholderspots_asia.xml": {
+   "bytes": 8846,
+   "sha256": "8ae44385102644b900b11a448bf9343d6704dacfe1db132781a47e6e6720efd3"
+  },
+  "placeholderspots_europe.xml": {
+   "bytes": 8506,
+   "sha256": "f953b5c2ee5a47d540ce611439c4e0f31cb75879be2f974d4d59492a878824da"
+  },
+  "playerreports.xml": {
+   "bytes": 1502,
+   "sha256": "817464cd36f854fefa547eab4f1d159388fb018da23acaf6c1fc8c28f831b7d9"
+  },
+  "profanity.xml": {
+   "bytes": 1745,
+   "sha256": "6189ab27a8855ad3dbb49a4770569a9b5270c685332751e96e2a258a9e3eaffe"
+  },
+  "progressiontables.xml": {
+   "bytes": 105630,
+   "sha256": "61593f3bc8e1fdd38a2b6470df45c1a43734c5ca9c0b2a7dc7b5266eadefa94d"
+  },
+  "pvpchallenge.xml": {
+   "bytes": 259626,
+   "sha256": "e66b5be6ae13a35d0a11938239f4edbf10538226c307b8f7b6c1b8403495562e"
+  },
+  "pvpchallenge_asia.xml": {
+   "bytes": 248770,
+   "sha256": "dc3c937543afe42c28895ed9865a48e54538c19dde90b4af8126baf27123d8af"
+  },
+  "pvpchallenge_europe.xml": {
+   "bytes": 230655,
+   "sha256": "2123eb94636e479215a00cc0ee80d92f6728c6fc4574f8865e24cf873e48ad19"
+  },
+  "questgiverobjects.xml": {
+   "bytes": 6774,
+   "sha256": "e3e87cb8880761f502a5c144440e5547385c1c75f2d9f2974518c1dd5e29a379"
+  },
+  "questgiverreferences.xml": {
+   "bytes": 8811,
+   "sha256": "48e403e2e985a4c3b4ef3f83084f3290f4fd60cc547f5246ae39bc4841ff0484"
+  },
+  "questgivertypes.xml": {
+   "bytes": 23506,
+   "sha256": "ead7130aadac10ae8918d2d6be99fd9cd97c9c558c6fbe4800fa5986ed0c4df2"
+  },
+  "quests.xml": {
+   "bytes": 167418,
+   "sha256": "7436877ec7ae6c43951790ed4203afb8c9fbfd885aaa1105eec1f86707566c05"
+  },
+  "randomclusterattributes.xml": {
+   "bytes": 2129,
+   "sha256": "ca47d96d74dad04b18f80611a007325389b7f62bdbf3ea102a89b04f2da0335e"
+  },
+  "randomdungeons.xml": {
+   "bytes": 545932,
+   "sha256": "89d200e18314c0273abdf83a67b4c07b86647290f3eaa068590b7e02691a577d"
+  },
+  "randomspawnbehaviors.xml": {
+   "bytes": 1486560,
+   "sha256": "20089240ae20534cb3eb501d1633b3182b78812c0e5916e6a8f9a7717c85ec74"
+  },
+  "rareresourcedistribution.xml": {
+   "bytes": 11032,
+   "sha256": "7db191a7aa011b44e5e3c143cfb2ce8ade2a25c35380678f58f0025632fe3407"
+  },
+  "resourcedistpresets.xml": {
+   "bytes": 466383,
+   "sha256": "273578e6320cfe070e9abef7cdf5491ffa52817898d92c0b40403cb373a7130a"
+  },
+  "resourceprefabmappings.xml": {
+   "bytes": 823063,
+   "sha256": "44445c059b3c6935a04dfdaaf9691882920cdfc93489f0fcdbf3324571c50e8f"
+  },
+  "seasonstatues.xml": {
+   "bytes": 4536,
+   "sha256": "05491a70314106ce47989878dc077f8ec0f0c3a980a6da33872a03c1388e7007"
+  },
+  "seasonstatues_asia.xml": {
+   "bytes": 4565,
+   "sha256": "1c328881baaacf49856781f871aed4fdbf6160cc1dbb97ac14bbf3b5a1822b09"
+  },
+  "seasonstatues_europe.xml": {
+   "bytes": 4587,
+   "sha256": "85057fa5c364dd96e90a11fd4031ff7ba83e0e519242d66b3861144f85d47a8c"
+  },
+  "settings.xml": {
+   "bytes": 1159,
+   "sha256": "ba04b26d4d507b0b0d2ea6047900941b07ab30143d991a9513d1e39e598a1aaa"
+  },
+  "sockets.xml": {
+   "bytes": 293877,
+   "sha256": "37fd7c0cae964d286a8b10ee3f42d896a5d5bf215b370c57130c9336e6a260f5"
+  },
+  "spellanimmappings.xml": {
+   "bytes": 673,
+   "sha256": "e67412505940969f83de7bef24c3a4cc27ef8d05dc51a293a9758b46c2b6ad9f"
+  },
+  "spells.xml": {
+   "bytes": 9351729,
+   "sha256": "a043742c948577b9b3a6e7164b3bb723edd30df87bc1085692a9fa7141b6aa5b"
+  },
+  "standings.xml": {
+   "bytes": 5743,
+   "sha256": "1d8f8a14812af31c040a7f0305f6fd9e9e24fa310762aafc4a2e99d1a1ab9d8c"
+  },
+  "staticdungeons.xml": {
+   "bytes": 13932,
+   "sha256": "fab442ab16898f4266d007c541314673fd8c1991a18775e54f6320acb1614ec8"
+  },
+  "surveys.xml": {
+   "bytes": 1865,
+   "sha256": "5794722cc04bc6357132e9887371d5b184c1b4c7c1e054646cbb591ba3bee3ca"
+  },
+  "templatemetadata.xml": {
+   "bytes": 298994,
+   "sha256": "cc6e952428a3d51b35872f905a34f7bdab75a4f41d649ba9a9f5311595464865"
+  },
+  "territorytypes.xml": {
+   "bytes": 22007,
+   "sha256": "3e336a1515eff04423437d9923dc1e335aff8b893270d2342ca98bb509228cbb"
+  },
+  "tilebiomereferences.xml": {
+   "bytes": 19799,
+   "sha256": "1fa914cfa13b40c5493806c86a7813aff19884cd5dc7ee17cd856a7bc7bae294"
+  },
+  "times.xml": {
+   "bytes": 11512,
+   "sha256": "bd61ac786cce946b4b4dd5f6e102c41e4351ed8746ef8a4f9d473c7ef497c9ae"
+  },
+  "times_asia.xml": {
+   "bytes": 11435,
+   "sha256": "79be6fd1a3c00f994bd740bfdbcd29afe10b7d8883f1537ba324b35793d101b9"
+  },
+  "times_europe.xml": {
+   "bytes": 11589,
+   "sha256": "6568b1a967546e6ee0e6cdda4beb4837d5402f8ac0f4af95918ff5a35845c47c"
+  },
+  "transformations.xml": {
+   "bytes": 20541,
+   "sha256": "8d62986c039e7a48857ab96bc23e4c52fdf712a3948be3cd2f69deb5a307a762"
+  },
+  "treasuredistribution.xml": {
+   "bytes": 772943,
+   "sha256": "b0107d1d932e6bb4ae8a89eee7c96af8246b9bb7bb15c3f7acbe711ab6702c5e"
+  },
+  "treasuredistribution_asia.xml": {
+   "bytes": 773277,
+   "sha256": "02f4fb0478b83945503e0ec51b4fd1dd0abc8f32549391f57276cc3d640d6436"
+  },
+  "treasuredistribution_europe.xml": {
+   "bytes": 772875,
+   "sha256": "458df77470abf8ca1eb2f50201c3ff9261d2633945d74eb442396ed196ff3507"
+  },
+  "treasures.xml": {
+   "bytes": 9933,
+   "sha256": "2a8ec3f74ea0e044d324f7be8ff527cb7ffd530056d3e14b697f2bc4e26b4b01"
+  },
+  "tunnelsystem.xml": {
+   "bytes": 19300,
+   "sha256": "275a46583fe68c9fe71e11b35c198fcc4f712a6d597450d24a99ed87a485789b"
+  },
+  "tutorial.xml": {
+   "bytes": 10716,
+   "sha256": "b6f00f8ec628df095fb5fadcf234cf56758ad65c181d2c7adea1abc5d9fe8c93"
+  },
+  "vfxprefabdata.xml": {
+   "bytes": 77895,
+   "sha256": "656f888ef1b8e7148ee566fb7c538911ceca384f7b787e8ab344349cd434c825"
+  },
+  "visualevents.xml": {
+   "bytes": 451,
+   "sha256": "35bd827c6aa7b2d56eba8343cf38d801e6039c16d51381538a116e160974b39a"
+  },
+  "wardrobe.xml": {
+   "bytes": 69838,
+   "sha256": "e50e86a0997a60e41a32d4b3e823a5fb83a7e8ad2c47dc3fc84f273593ec17c1"
+  },
+  "wardrobe_asia.xml": {
+   "bytes": 59258,
+   "sha256": "dc68302cbe39441d6aa75e58e48cfc78a9aacd25be922a802db4afafb31b0071"
+  },
+  "wardrobe_europe.xml": {
+   "bytes": 59258,
+   "sha256": "d04f7d6ffffcfae29c6eea446cb9b4656eda72786506c4094d7936301aa55b1e"
+  },
+  "worldbosses.xml": {
+   "bytes": 10561,
+   "sha256": "35be89d852d692c7e8c1f54eee968f0c738e078f953c7c103f21de09d2588186"
+  },
+  "worldbosses_asia.xml": {
+   "bytes": 10381,
+   "sha256": "537e55ad9fea848dab67962fdcdd85f0c4ef59dc3c2abc7c3f7bd3c49799ab61"
+  },
+  "worldsettings.xml": {
+   "bytes": 470574,
+   "sha256": "16654bc9d3cd549f3e6625b5ada488ec82364f8e63a78fd15493a21f0c44304d"
+  },
+  "worldsettings_asia.xml": {
+   "bytes": 405181,
+   "sha256": "bbbc9eaf486bafae3f2aae45e5906cb05fea3119a35ede8c43baa74187a40bd2"
+  },
+  "worldsettings_europe.xml": {
+   "bytes": 405230,
+   "sha256": "f06a859484b1fad1fc7ed899ff775a75a17741c4f37e1f7d8b3c817682aa6cf2"
+  }
+ },
+ "generatedAt": "2026-09-29T20:48:32+00:00",
+ "version": "1.32.020.344269"
+}

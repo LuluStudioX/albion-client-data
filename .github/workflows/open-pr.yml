@@ -47,5 +47,9 @@ jobs:
           # Auto-merge is a request, not a merge: GitHub performs it once the required check
           # passes. It fails loudly if branch protection or the repo setting is missing, which
           # is the failure we want to see rather than a silent direct merge.
-          gh pr merge "$number" --auto --merge
+          #
+          # Squash, not a merge commit. `main` requires linear history so that one client build
+          # is one commit: `git diff v1.32.010 v1.32.020` then means exactly what it looks like,
+          # and bisecting a data regression walks builds rather than merge bubbles.
+          gh pr merge "$number" --auto --squash
           echo "auto-merge armed on #$number"

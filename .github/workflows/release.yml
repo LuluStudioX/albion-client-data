@@ -57,7 +57,8 @@ jobs:
           Every file's sha256 is in \`manifest.json\`. Unofficial, not affiliated with Sandbox
           Interactive - see [NOTICE.md](../../blob/main/NOTICE.md)."
 
-          git tag -a "$tag" -m "client $version"
-          git push origin "$tag"
-          gh release create "$tag" --title "$tag" --notes "$notes"
+          # `--target` makes the tag through the API, so the runner needs no git identity.
+          # `git tag -a` here failed with "empty ident name" - a real runner has no user.name,
+          # and configuring one just to annotate a tag nobody reads is ceremony.
+          gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" --notes "$notes"
           echo "released $tag"

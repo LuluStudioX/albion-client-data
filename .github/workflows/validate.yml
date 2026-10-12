@@ -42,7 +42,15 @@ jobs:
         id: base
         run: |
           base=$(git show origin/main:VERSION 2>/dev/null | tr -d '[:space:]' || true)
+          # A change to this repo's own files (workflows, README) carries no new build, so it
+          # cannot advance VERSION and would fail here forever. Skip only the advance check, and
+          # only when the data, VERSION and manifest are byte-identical to main's; everything
+          # else validate.py checks still runs against the committed bytes.
+          if [ -n "$base" ] && git diff --quiet origin/main HEAD -- gamedata VERSION manifest.json; then
+            echo "no data change against main - not a publish, skipping the version-advance check"
+            base=""
+          fi
           echo "version=$base" >> "$GITHUB_OUTPUT"
-          echo "published: ${base:-<none, first publish>}"
+          echo "published: ${base:-<none, or not a publish>}"
       - name: Validate the committed bytes
         run: python3 .github/validate.py --base-version "${{ steps.base.outputs.version }}"

@@ -5,8 +5,15 @@ name: open-pr
 # publish credential has to mean "someone can push data that is already public", never
 # "someone can act as us on GitHub".
 #
-# So the repository opens its own pull request, with the built-in GITHUB_TOKEN, and turns on
-# auto-merge. Nobody has to act for a good publish to land; nothing lands if `validate` is red.
+# So the repository opens its own pull request, with the built-in GITHUB_TOKEN, waits for
+# `validate` and merges it. Nobody has to act for a good publish to land; nothing lands if
+# `validate` is red.
+#
+# ONLY the box's publishes merge themselves. This runs on a push to `updates-**`, which only a
+# writer can make, and it then also insists the branch is `updates-<VERSION>` with the head
+# commit `client <VERSION>` - the exact shape publish_gamedata.py writes. Anything else,
+# including every pull request a person opens from a fork or a branch of their own, never
+# reaches this job and waits for a human to review and merge it.
 on:
   push:
     branches: ["updates-**"]
@@ -14,28 +21,33 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  # `gh workflow run release.yml` below. See the last step for why it is needed.
+  actions: write
 
 jobs:
   open:
     name: open the pull request
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
-      - name: Open it, or reuse the one that is already open
+      - name: Open it, wait for validate, merge it
         env:
           GH_TOKEN: ${{ github.token }}
           BRANCH: ${{ github.ref_name }}
-        # NEVER let this job fail.
-        #
-        # A red check run - any red check run, required or not - leaves the pull request in
-        # GitHub's UNSTABLE state, and auto-merge only fires on CLEAN. So a failure here does
-        # not merely skip opening the PR: it deadlocks the merge of a publish that `validate`
-        # has already passed. This job arranges the merge; it must never become the reason the
-        # merge cannot happen. It says loudly what went wrong and exits 0.
+        # NEVER let this job fail. A red check run on the head commit is noise on the PR that a
+        # reader takes for a bad publish. It says loudly what went wrong and exits 0.
         continue-on-error: true
         run: |
           set -uo pipefail
           version=$(tr -d '[:space:]' < VERSION)
+          subject=$(git log -1 --pretty=%s)
+
+          if [ "$BRANCH" != "updates-$version" ] || [ "$subject" != "client $version" ]; then
+            echo "::warning::$BRANCH (head '$subject', VERSION $version) is not a box publish."
+            echo "::warning::Not opening or merging anything - open a PR by hand and review it."
+            exit 0
+          fi
 
           # `gh pr create` prints the PR URL and has no --json; `gh pr merge` takes that URL
           # as happily as a number, so the URL is what travels between the two.
@@ -47,8 +59,8 @@ jobs:
               git log -1 --pretty=%b
               echo
               echo "Opened automatically by \`open-pr.yml\`. The \`validate\` check re-derives"
-              echo "every hash from the committed bytes; auto-merge lands this the moment that"
-              echo "is green, and never if it is red."
+              echo "every hash from the committed bytes; this merges the moment that is green,"
+              echo "and never if it is red."
             } > /tmp/pr-body.md
             url=$(gh pr create --base main --head "$BRANCH" \
               --title "client $version" --body-file /tmp/pr-body.md) || url=""
@@ -64,17 +76,38 @@ jobs:
             echo "opened $url"
           fi
 
-          # Auto-merge is a request, not a merge: GitHub performs it once the required check
-          # passes. It fails loudly if branch protection or the repo setting is missing, which
-          # is the failure we want to see rather than a silent direct merge.
-          #
+          # Wait for validate, then merge directly. NOT `gh pr merge --auto`: GitHub only arms
+          # auto-merge on a PR that is still blocked, and validate takes ~13s, so it was usually
+          # green before the PR existed. Arming then failed with "Pull request is in unstable
+          # status" and client 1.32.030.345319 (PR #3) sat open until someone noticed. Branch
+          # protection still gates this merge: with validate red or missing it is refused.
+          sha=$(git rev-parse HEAD)
+          conclusion=""
+          for _ in $(seq 1 90); do
+            conclusion=$(gh api "repos/$GITHUB_REPOSITORY/commits/$sha/check-runs?check_name=validate" \
+              --jq '.check_runs | sort_by(.started_at) | last
+                    | if . == null or .status != "completed" then "" else .conclusion end')
+            [ -n "$conclusion" ] && break
+            sleep 10
+          done
+          if [ "$conclusion" != "success" ]; then
+            echo "::warning::validate on $sha is '${conclusion:-still running after 15 min}' -"
+            echo "::warning::not merging $url. Fix the publish, or merge by hand once it is green."
+            exit 0
+          fi
+
           # Squash, not a merge commit. `main` requires linear history so that one client build
           # is one commit: `git diff v1.32.010 v1.32.020` then means exactly what it looks like,
           # and bisecting a data regression walks builds rather than merge bubbles.
-          if gh pr merge "$url" --auto --squash; then
-            echo "auto-merge armed on $url"
-          else
-            echo "::warning::Could not arm auto-merge on $url - merge it by hand once validate"
-            echo "::warning::is green. Check that 'Allow auto-merge' is on and that main is"
-            echo "::warning::protected with validate as a required check."
+          if ! gh pr merge "$url" --squash; then
+            echo "::warning::Could not merge $url although validate is green. Merge it by hand;"
+            echo "::warning::check that main is protected with validate as its required check."
+            exit 0
           fi
+          echo "merged $url"
+
+          # A push made with GITHUB_TOKEN starts no workflows (GitHub's loop guard), so the merge
+          # above never fires release.yml's `push: main` trigger and the build would get no tag.
+          # workflow_dispatch is the one event GITHUB_TOKEN may raise. release.yml is idempotent.
+          gh workflow run release.yml --ref main || \
+            echo "::warning::Could not start release.yml - run it by hand to tag v$version."

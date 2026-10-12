@@ -87,10 +87,7 @@ file.
 
 ## How it is published
 
-Unattended, on patch day. A script on the maintainer's box decodes the new build, runs six
-refusal checks over it, and pushes an `updates-<version>` branch. A workflow in this
-repository validates the committed bytes independently, opens a pull request and turns on
-auto-merge, so a green build lands with nobody acting and a red one lands never.
+Unattended, on patch day. A script on the maintainer's box decodes the new build, runs six refusal checks over it, and pushes an `updates-<version>` branch. A workflow in this repository validates the committed bytes independently, opens a pull request and merges it once that check is green, so a green build lands with nobody acting and a red one lands never. Only those publishes merge themselves. A pull request anyone else opens waits for a maintainer.
 
 The checks that can refuse a publish: every XML parses; the version strictly advanced; the
 file count is within 10% of the last release; no file lost more than half its size; the

@@ -32,7 +32,7 @@ no shallow-clone advice and nothing to prune.
 ## Checking what you got
 
 `manifest.json` holds the sha256 of every file, and it is recomputed from the bytes on every
-publish rather than carried forward:
+publish rather than carried forward. Keys are POSIX paths relative to `gamedata/` and may contain `/` (for example `cluster/world.xml`):
 
 ```bash
 python3 - <<'PY'

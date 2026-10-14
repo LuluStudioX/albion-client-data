@@ -52,5 +52,7 @@ jobs:
           fi
           echo "version=$base" >> "$GITHUB_OUTPUT"
           echo "published: ${base:-<none, or not a publish>}"
+      - name: Test the validator
+        run: python3 -m unittest discover -s .github -p "test_validate.py"
       - name: Validate the committed bytes
         run: python3 .github/validate.py --base-version "${{ steps.base.outputs.version }}"

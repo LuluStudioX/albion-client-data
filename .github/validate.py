@@ -7,7 +7,7 @@ This is deliberately a SECOND OPINION. The box-side publisher runs its own check
 pushes, and a check that is wrong passes itself - so this one re-derives everything from what
 actually landed in the commit rather than trusting any of it:
 
-  - every file in gamedata/ parses as XML
+  - every .xml file under gamedata/ (nested folders included) parses as XML
   - manifest.json names exactly those files, with the right sha256 and byte count
   - VERSION is dotted digits and agrees with manifest.version
   - VERSION strictly advances on the base branch's (when --base-version is given)
@@ -58,11 +58,17 @@ def main():
     if man.get("version") != version:
         fail(f"VERSION says {version!r}, manifest says {man.get('version')!r}")
 
-    on_disk = sorted(f for f in os.listdir(SUBDIR) if f.endswith(".xml"))
+    on_disk = sorted(
+        os.path.relpath(os.path.join(d, f), SUBDIR).replace(os.sep, "/")
+        for d, _, fs in os.walk(SUBDIR) for f in fs if f.endswith(".xml"))
     if not on_disk:
         fail(f"{SUBDIR}/ holds no .xml files")
 
     listed = sorted(man.get("files") or {})
+    for key in listed:
+        parts = key.split("/")
+        if key.startswith(("/", "\\")) or ":" in key or ".." in parts or "" in parts:
+            fail(f"manifest key {key!r} is not a relative path inside {SUBDIR}/")
     if on_disk != listed:
         missing = sorted(set(on_disk) - set(listed))
         extra = sorted(set(listed) - set(on_disk))
@@ -70,7 +76,7 @@ def main():
              f"listed but absent: {extra[:5]}")
 
     for fn in on_disk:
-        path = os.path.join(SUBDIR, fn)
+        path = os.path.join(SUBDIR, *fn.split("/"))
         try:
             ET.parse(path)
         except Exception as e:                             # noqa: BLE001 - the reason is the point

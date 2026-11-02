@@ -11,6 +11,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SCRIPT = os.path.join(HERE, "validate.py")
 ROOT = os.path.dirname(HERE)
 XML = b"<a/>"
+# A made-up subfolder: the client ships real ones (1.32.040 added gamedata/cluster/world.xml).
+NESTED = "_fixture_nested"
 
 
 def entry(raw):
@@ -32,7 +34,7 @@ class ValidateTree(unittest.TestCase):
         return subprocess.run([sys.executable, SCRIPT], cwd=self.tmp, capture_output=True, text=True)
 
     def add_nested(self):
-        d = os.path.join(self.tmp, "gamedata", "cluster")
+        d = os.path.join(self.tmp, "gamedata", NESTED)
         os.makedirs(d)
         open(os.path.join(d, "world.xml"), "wb").write(XML)
 
@@ -41,21 +43,21 @@ class ValidateTree(unittest.TestCase):
 
     def test_nested_file_passes(self):
         self.add_nested()
-        self.man["files"]["cluster/world.xml"] = entry(XML)
+        self.man["files"]["_fixture_nested/world.xml"] = entry(XML)
         r = self.run_validate()
         self.assertEqual(r.returncode, 0, r.stdout)
 
     def test_listed_but_absent_fails(self):
-        self.man["files"]["cluster/world.xml"] = entry(XML)
+        self.man["files"]["_fixture_nested/world.xml"] = entry(XML)
         r = self.run_validate()
         self.assertNotEqual(r.returncode, 0)
-        self.assertIn("listed but absent: ['cluster/world.xml']", r.stdout)
+        self.assertIn("listed but absent: ['_fixture_nested/world.xml']", r.stdout)
 
     def test_nested_unlisted_fails(self):
         self.add_nested()
         r = self.run_validate()
         self.assertNotEqual(r.returncode, 0)
-        self.assertIn("unlisted: ['cluster/world.xml']", r.stdout)
+        self.assertIn("unlisted: ['_fixture_nested/world.xml']", r.stdout)
 
     def test_parent_key_fails(self):
         self.man["files"]["../x.xml"] = entry(XML)

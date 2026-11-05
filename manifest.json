@@ -10,12 +10,12 @@
    "sha256": "f55ba6e09c5928ba4d405bc94b342272fe3b25c9099b78b608dd66fcee527f1d"
   },
   "advertisementpopups.xml": {
-   "bytes": 49973,
-   "sha256": "de5963e82d396fc69cf5c753fe88d6c88392292087ff0380a5bc263cf92f1b94"
+   "bytes": 50545,
+   "sha256": "2e7563af6285ea01de6e541c667b03401bc150d7527f5ec44a7601dfbff26372"
   },
   "albionjournal.xml": {
-   "bytes": 1961264,
-   "sha256": "99237299411a4e7d60232836e5e557386ad35e414cfbaa0f6e56203b50f2c634"
+   "bytes": 1961539,
+   "sha256": "2620284fb7d6d83e4b25a7be0fb9041b080edc532816177ec5d4d6861a3f58bb"
   },
   "albionjournalquests.xml": {
    "bytes": 87625,
@@ -30,28 +30,28 @@
    "sha256": "12d9c3b47a46ea8a75a05758d5c6b6ce9da36c2075079a1df9658bc690afafb7"
   },
   "arena.xml": {
-   "bytes": 180739,
-   "sha256": "99709f4f0b801c4ae1c3b943bccee67754e8ade871c1b2c3e1bce6724994a949"
+   "bytes": 180964,
+   "sha256": "66b78a72493ce765f569273640de64d0268e82be5a74f94dbadca238ace5cadb"
   },
   "arena_asia.xml": {
-   "bytes": 177899,
-   "sha256": "6d300c465403fba1588ffa21761096690bc7b29e009de79309f97e3b8fac379f"
+   "bytes": 178124,
+   "sha256": "bd1d09d9be64f0bbf9ff98c83c75d655699af4ef238a602d6db6887e78ab0fcb"
   },
   "arena_europe.xml": {
-   "bytes": 177029,
-   "sha256": "6127b76182ff4fc984ce836cb6b1565a1d1e1bba5795b4033ee7ad645f29234f"
+   "bytes": 177254,
+   "sha256": "32b59fad8640c4421a8816dec32f24e7dd5c9e89cc48af04d2150a31118881e3"
   },
   "armory.xml": {
    "bytes": 33593,
    "sha256": "ac77a595e8c516529c92c493459337ad8da13288b939f3f006611a987b67ef17"
   },
   "assetvfx.xml": {
-   "bytes": 299398,
-   "sha256": "42e0304b5ed02163629d8ff55005086c8babd64f565ec60efcbd2f64b7b6771a"
+   "bytes": 299940,
+   "sha256": "4f4132d737a296e2bac44213de988a7be539f6901e6f37ff2d482279fa039a8e"
   },
   "audio.xml": {
-   "bytes": 514775,
-   "sha256": "aef5f51b9a456eb9df79591ac9da8a0be14e215c0e747df963928dfe8dfbc60e"
+   "bytes": 514792,
+   "sha256": "2b068bb412400af57f71ebd14cdc11f35486b8ea7e6f6aff0034a87ab812645f"
   },
   "avatars.xml": {
    "bytes": 39680,
@@ -89,6 +89,10 @@
    "bytes": 4666,
    "sha256": "9e623b8e89fdc4121137dc3a944f83c33b8cfdfb2e2233d4ade975a0844a798d"
   },
+  "cluster/world.xml": {
+   "bytes": 13331186,
+   "sha256": "6a5050f847b48f59c3dc6b1e0da0f075b88e7afddaba3b25460ab2705865d8ef"
+  },
   "corrupteddungeons.xml": {
    "bytes": 5430,
    "sha256": "46b2a3bb1b0a42b1b677754099aaa31bd5108cd61edbcf3ed2874db6c4b5445b"
@@ -98,16 +102,16 @@
    "sha256": "85dadee62cfa30bb4e2459891b6d2d4e272d2801372f3ac73b36c9364c5e730a"
   },
   "crystalleague.xml": {
-   "bytes": 712183,
-   "sha256": "ac97fea2b5dbc6f4f889d037ae3d9bb647c1ae9c1712d1b727dfba774b7b4b4a"
+   "bytes": 714244,
+   "sha256": "aac29eb12ffb9008077101e18def91ea77e2f62155fe6c7999fcafeef66a38a4"
   },
   "crystalleague_asia.xml": {
-   "bytes": 697704,
-   "sha256": "95056d8a708c4a17f9ddda20160aad2da2f78fa9188062545609f59c98005d79"
+   "bytes": 699601,
+   "sha256": "26984e0bab14ba0d3e57d6b3fc312156e29b8be539a4bb9cb4d4f6049859e186"
   },
   "crystalleague_europe.xml": {
-   "bytes": 697251,
-   "sha256": "91b88be2a98f750b752e574691d70bc608ebdeb3deaa16bdc294a8955b2e3f03"
+   "bytes": 699140,
+   "sha256": "e43c557c99e46a28b12deeca0d5ffd8dbd8610c8bb2ff7877b40d07cd9f6a9f8"
   },
   "crystalrealmgvg.xml": {
    "bytes": 3374,
@@ -183,7 +187,7 @@
   },
   "festivities.xml": {
    "bytes": 39954,
-   "sha256": "d602741f7010b78ec44c6b7b2f55d531aa80b75a5d550c4940ed36858218ebdd"
+   "sha256": "ba90585df737970666581ec33e799f74b1241a60f9dfdc96e95fde7ed7c43c04"
   },
   "fortificationguards.xml": {
    "bytes": 4777,
@@ -191,15 +195,15 @@
   },
   "gamedata.xml": {
    "bytes": 123542,
-   "sha256": "5e649e33ef8ab4b62a7fba30f0e34561a8198d84c2f184676bdd06a9d8de9204"
+   "sha256": "4691782748ebd1380838a65db1d94f4082dbbcc30bef552f8ce5ff3e5c21b025"
   },
   "gamedata_asia.xml": {
    "bytes": 119831,
-   "sha256": "1b2a0ab488b0d8720cf7486f839724afc4a9e10995a8c3ee012768ab6c11812d"
+   "sha256": "8fa871cd6a9f2783cfbe811c62ff763784933ddf71d556b8747fa381bb6496de"
   },
   "gamedata_europe.xml": {
    "bytes": 119831,
-   "sha256": "20ad38f7a6174c5edbb307b8813ef58dcdd6eb055c6f4e8edef21dd5220135ad"
+   "sha256": "7c8752877c06628dd16ec42f05e2c0ee29ea42b871fab62db4ed9b5b9d8f5d26"
   },
   "guildfinder.xml": {
    "bytes": 1158,
@@ -218,16 +222,16 @@
    "sha256": "ec9395bcd5f19ca70056b59bd5b8bf463503552ea0f65261083e04d9b169d1ca"
   },
   "gvgseasons.xml": {
-   "bytes": 625034,
-   "sha256": "4b4a48691ea42eb8a29f97fb6489b80218acfe597f046d8046e59cacec9222cc"
+   "bytes": 642606,
+   "sha256": "2033103655af1825269115a5b31ab7c603bd6789d17907ffd8ab0fb743b2bd8b"
   },
   "gvgseasons_asia.xml": {
-   "bytes": 293877,
-   "sha256": "de9702b22495d03aa7f9999564570abf8314e1ed0e0e6ca5e8b19b2046c2153b"
+   "bytes": 312974,
+   "sha256": "ab3bfd78dddcb93ff9a64410081ab18accd6ba4bbc5fad41f3aedf80f23a751b"
   },
   "gvgseasons_europe.xml": {
-   "bytes": 212930,
-   "sha256": "d4054e59c788cc96dd3fde326ac27a56644659e533f5f06d8b798d984ceee9e5"
+   "bytes": 230349,
+   "sha256": "4e49241b491acb0060d201d330e46f90f2fe7d7444086294a45c113e9d26a108"
   },
   "harvestables.xml": {
    "bytes": 577904,
@@ -258,8 +262,8 @@
    "sha256": "a6d1dd57085c0b8de1b912ec53ef9482407ba08cd0bf15b7e38fafd8469c72fc"
   },
   "items.xml": {
-   "bytes": 10789006,
-   "sha256": "76048fe48a605a6137ed54f5d0b2d3476dbce4b1499a37e20ad1288d790f2074"
+   "bytes": 10799621,
+   "sha256": "764ec005d2ed31d896bdc76018112f028c91d7aa443b51b0d4ced52174820fc1"
   },
   "killemotes.xml": {
    "bytes": 4956,
@@ -278,8 +282,8 @@
    "sha256": "4a4fb17e01f318289884abef4688ba30a0b6c61117fe0b71b68dc7ff3738f953"
   },
   "localization.xml": {
-   "bytes": 78244563,
-   "sha256": "8dcab46097974967eb562395f2b4202bd2797c3c82471643781c53128ebec5a7"
+   "bytes": 78423908,
+   "sha256": "1648736cc29415ab276928939d0800599dcf8e5e9fd1a1a36a88c14dc77ed06f"
   },
   "localquests.xml": {
    "bytes": 29439,
@@ -290,12 +294,12 @@
    "sha256": "350f72154014f4d8c0cb0f17747d8a6615ff052d82fc712710c9973782dfe5bb"
   },
   "loot.xml": {
-   "bytes": 2231442,
-   "sha256": "7d4bf73e83f082e88c055d34b32bd7765db10c050e9abb0aa3648757f602c604"
+   "bytes": 2231456,
+   "sha256": "e138e75e3cf27730332a4328c1e6bfac5ee37799842f32214ffa7021ddb8c693"
   },
   "lootchests.xml": {
-   "bytes": 1048213,
-   "sha256": "a172b9d54ac01ed61fdcee9ebad12464dd8a3018b75521e53053e4974cca3af6"
+   "bytes": 1048518,
+   "sha256": "b3742732b58190578828aeb71493e24798534151435da47c241a08fac310b8be"
   },
   "lore.xml": {
    "bytes": 8538,
@@ -303,7 +307,7 @@
   },
   "matchtypes.xml": {
    "bytes": 17443,
-   "sha256": "05abbd1192c587b7195a0f0dff96b73f13830f95994b008be9d501edbe434809"
+   "sha256": "9ff6dfb08ff568901a87342a7715ecfff1f77ebf264ab37d15410ea97ffa5529"
   },
   "minimapgendata.xml": {
    "bytes": 405684,
@@ -326,24 +330,24 @@
    "sha256": "8fb0559fb9890bd2b8bbb5b8c5d6e339160f42e33813bd3ac070586294402e05"
   },
   "mobs.xml": {
-   "bytes": 12552521,
-   "sha256": "9a5e700022a5a2f19181249ff80f7934707a63b57b25b7480365b6a22fa32d9b"
+   "bytes": 12552509,
+   "sha256": "ec1a681979b0ee0bf60a37c2f9409a57e5c610c14d5b5ba0fd8689ea88ce5d67"
   },
   "moderationpunishmentescalation.xml": {
    "bytes": 18036,
    "sha256": "cd5e195f6cb30b358e8e3b2edd214fd1fe34e370f649fb60d78e5db163b95c41"
   },
   "mountskins.xml": {
-   "bytes": 37430,
-   "sha256": "e41a1ed241266f36a5978e8e2a9260960f17c648023facb974e29af53af89b94"
+   "bytes": 37604,
+   "sha256": "508976f1d9ed5e2ea35dbfd760f25ad8e6ace465c6571d8b121f81411cfdf79d"
   },
   "mountskins_asia.xml": {
-   "bytes": 33457,
-   "sha256": "050b26bf1b20c73effab89fe2e38b44baae832fd155ab6b5c7a3009751385dba"
+   "bytes": 33606,
+   "sha256": "b620c42fed460474a357ce0d93012198c3078cf6902fbdf08660b1879152916a"
   },
   "mountskins_europe.xml": {
-   "bytes": 33457,
-   "sha256": "6c8ba07ca4b18f00851e489a3b640de995ce7c30e44e671a5b0a96c23c831873"
+   "bytes": 33606,
+   "sha256": "9559b8a738a1b64e3eb9306316b44ebc503b567af72f065a0b0359884bb0aa8a"
   },
   "multirewardobjects.xml": {
    "bytes": 2443,
@@ -398,16 +402,16 @@
    "sha256": "61593f3bc8e1fdd38a2b6470df45c1a43734c5ca9c0b2a7dc7b5266eadefa94d"
   },
   "pvpchallenge.xml": {
-   "bytes": 259621,
-   "sha256": "4df4a47ce855fa279cd31e53422e7929deba50301c24f4c0bfdde602cc954156"
+   "bytes": 275583,
+   "sha256": "ad4b4cd61b9f3ec22cd0eb6e9aa8d5ac8c2ede7fc9653b2a4a325b272177bf6e"
   },
   "pvpchallenge_asia.xml": {
-   "bytes": 248765,
-   "sha256": "ccf32c67fb555294198dbdeb037ee45404c970d36f4f73703c222caef816949b"
+   "bytes": 264793,
+   "sha256": "f524e34ba644c2c082340fd3ffcfd774ee1fc4c2b4a2555578ffac9d33ac7358"
   },
   "pvpchallenge_europe.xml": {
-   "bytes": 230650,
-   "sha256": "613a8af44680cfd0c3fd8a049dbfb4e2ad608a245db7c73195d8850bd1de0dd8"
+   "bytes": 246678,
+   "sha256": "39f45b3172191d7a953e88955567e7ae6829d5579c102b1886aa82951851be45"
   },
   "questgiverobjects.xml": {
    "bytes": 6774,
@@ -466,16 +470,16 @@
    "sha256": "ba04b26d4d507b0b0d2ea6047900941b07ab30143d991a9513d1e39e598a1aaa"
   },
   "sockets.xml": {
-   "bytes": 293877,
-   "sha256": "37fd7c0cae964d286a8b10ee3f42d896a5d5bf215b370c57130c9336e6a260f5"
+   "bytes": 294235,
+   "sha256": "2b09b59faeb8e5f0264b01b1a396c51027c603a585e222e968cc948dcc9ee26d"
   },
   "spellanimmappings.xml": {
    "bytes": 673,
    "sha256": "e67412505940969f83de7bef24c3a4cc27ef8d05dc51a293a9758b46c2b6ad9f"
   },
   "spells.xml": {
-   "bytes": 9365120,
-   "sha256": "f8ae99169a42dcb3166c5bbfde81e41be9ce1718a0c20a770a4b4b11b792d928"
+   "bytes": 9377585,
+   "sha256": "90795a003ed37224670a95e7bb47d6c6ac44741177df83eeb3c2a515171e353d"
   },
   "standings.xml": {
    "bytes": 5743,
@@ -502,16 +506,16 @@
    "sha256": "1fa914cfa13b40c5493806c86a7813aff19884cd5dc7ee17cd856a7bc7bae294"
   },
   "times.xml": {
-   "bytes": 11512,
-   "sha256": "bd61ac786cce946b4b4dd5f6e102c41e4351ed8746ef8a4f9d473c7ef497c9ae"
+   "bytes": 12252,
+   "sha256": "b3135e12d3e77b140f724891b224691fee9b922d4919a743a5277f8be17af381"
   },
   "times_asia.xml": {
-   "bytes": 11435,
-   "sha256": "79be6fd1a3c00f994bd740bfdbcd29afe10b7d8883f1537ba324b35793d101b9"
+   "bytes": 12175,
+   "sha256": "9d707a416316ad3a87db94e7f418d88ce5378e2bbd7d99d74a48c67898a78ccf"
   },
   "times_europe.xml": {
-   "bytes": 11589,
-   "sha256": "6568b1a967546e6ee0e6cdda4beb4837d5402f8ac0f4af95918ff5a35845c47c"
+   "bytes": 12329,
+   "sha256": "8074b621d9d237dcf3e70daee737515e61c92f9bc9d2361d0609667c49da60df"
   },
   "transformations.xml": {
    "bytes": 20541,
@@ -542,24 +546,24 @@
    "sha256": "b6f00f8ec628df095fb5fadcf234cf56758ad65c181d2c7adea1abc5d9fe8c93"
   },
   "vfxprefabdata.xml": {
-   "bytes": 77970,
-   "sha256": "fd081ecaab0894b562f892a92a229ab0145572c8acd9da20db56687fbb6437d7"
+   "bytes": 77968,
+   "sha256": "e4864ec795ca7732a876a7725a6211a40a4d35a79f792582112b822ee9d11159"
   },
   "visualevents.xml": {
    "bytes": 451,
    "sha256": "35bd827c6aa7b2d56eba8343cf38d801e6039c16d51381538a116e160974b39a"
   },
   "wardrobe.xml": {
-   "bytes": 69838,
-   "sha256": "e50e86a0997a60e41a32d4b3e823a5fb83a7e8ad2c47dc3fc84f273593ec17c1"
+   "bytes": 70430,
+   "sha256": "d46ec2f9639731ad8a34aaba75425543443bdaea408c438e4bbd778bb989f68b"
   },
   "wardrobe_asia.xml": {
-   "bytes": 59258,
-   "sha256": "dc68302cbe39441d6aa75e58e48cfc78a9aacd25be922a802db4afafb31b0071"
+   "bytes": 59740,
+   "sha256": "58149606d5fbe4127d19e3a5dd92256b1d38706277017c780a47163a970359db"
   },
   "wardrobe_europe.xml": {
-   "bytes": 59258,
-   "sha256": "d04f7d6ffffcfae29c6eea446cb9b4656eda72786506c4094d7936301aa55b1e"
+   "bytes": 59740,
+   "sha256": "b0e97cb6bc52e638c55e0ccd52e2c2dbe535e64194fb5040c01173f92603959e"
   },
   "worldbosses.xml": {
    "bytes": 10561,
@@ -582,6 +586,6 @@
    "sha256": "f06a859484b1fad1fc7ed899ff775a75a17741c4f37e1f7d8b3c817682aa6cf2"
   }
  },
- "generatedAt": "2026-10-12T10:17:16+00:00",
- "version": "1.32.030.345319"
+ "generatedAt": "2026-11-02T10:10:24+00:00",
+ "version": "1.32.040.346594"
 }

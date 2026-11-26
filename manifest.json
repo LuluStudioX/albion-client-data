@@ -10,12 +10,12 @@
    "sha256": "f55ba6e09c5928ba4d405bc94b342272fe3b25c9099b78b608dd66fcee527f1d"
   },
   "advertisementpopups.xml": {
-   "bytes": 50545,
-   "sha256": "2e7563af6285ea01de6e541c667b03401bc150d7527f5ec44a7601dfbff26372"
+   "bytes": 50808,
+   "sha256": "c8fff2cbe435b7f04613241a0514960da69b52de80cc1fbad362471c938f2df9"
   },
   "albionjournal.xml": {
-   "bytes": 1961539,
-   "sha256": "2620284fb7d6d83e4b25a7be0fb9041b080edc532816177ec5d4d6861a3f58bb"
+   "bytes": 1962654,
+   "sha256": "38995b6fc27cece6e834585371b747d4d474113609b0426fa445e6b48741df56"
   },
   "albionjournalquests.xml": {
    "bytes": 87625,
@@ -30,44 +30,44 @@
    "sha256": "12d9c3b47a46ea8a75a05758d5c6b6ce9da36c2075079a1df9658bc690afafb7"
   },
   "arena.xml": {
-   "bytes": 180964,
-   "sha256": "66b78a72493ce765f569273640de64d0268e82be5a74f94dbadca238ace5cadb"
+   "bytes": 180944,
+   "sha256": "a5d182eb9362ee18830734b08a214e95f291ad171a193500d9d69bebaa54e911"
   },
   "arena_asia.xml": {
-   "bytes": 178124,
-   "sha256": "bd1d09d9be64f0bbf9ff98c83c75d655699af4ef238a602d6db6887e78ab0fcb"
+   "bytes": 177975,
+   "sha256": "f0f3a513c374bd612b9c73cf5a2ff6d6889c0e4215f5fa330fe383892aae9231"
   },
   "arena_europe.xml": {
-   "bytes": 177254,
-   "sha256": "32b59fad8640c4421a8816dec32f24e7dd5c9e89cc48af04d2150a31118881e3"
+   "bytes": 177105,
+   "sha256": "92a28cb6c6e316f3624e9f49381ab3ae7aa8224ee5a34caf4a13d345985fe0ff"
   },
   "armory.xml": {
-   "bytes": 33593,
-   "sha256": "ac77a595e8c516529c92c493459337ad8da13288b939f3f006611a987b67ef17"
+   "bytes": 33297,
+   "sha256": "eb4b26e37641a5b21bf96d5f858a5bae83e044bf3d78661fc7e7207ce4d99766"
   },
   "assetvfx.xml": {
-   "bytes": 299940,
-   "sha256": "4f4132d737a296e2bac44213de988a7be539f6901e6f37ff2d482279fa039a8e"
+   "bytes": 299984,
+   "sha256": "5d5aef1c447147db7707365e1fe07621c859c7367e818bcc8932f29a04116642"
   },
   "audio.xml": {
-   "bytes": 514792,
-   "sha256": "2b068bb412400af57f71ebd14cdc11f35486b8ea7e6f6aff0034a87ab812645f"
+   "bytes": 515107,
+   "sha256": "93f07f621cf248c8fc50f8abf7a67f4b2d0f79a70731ea253324f15571e2482e"
   },
   "avatars.xml": {
-   "bytes": 39680,
-   "sha256": "bb1ff13ee299ef8999e36a4122ae7db787583e6ad903451274cb1dcdbe9218ce"
+   "bytes": 39973,
+   "sha256": "bb934f130b794da7602c8b6c0ee7e164ea0cbeaf72419bd9c30591d2a3f41ef1"
   },
   "avatars_asia.xml": {
-   "bytes": 39946,
-   "sha256": "5d216f87580749cab7bea9169ec40bec1296f778b21ab84530c83ebe5210509f"
+   "bytes": 40241,
+   "sha256": "be6962e52d80e3579be9efc29657bf59973713caa0c5996fdc25ab532d122859"
   },
   "buffshrines.xml": {
-   "bytes": 15630,
-   "sha256": "0ee49c039a3cffe053a67246203920b3e1c1b0a253e93c69a9a5973330b8d507"
+   "bytes": 14621,
+   "sha256": "682e6a60166c29962070f9d182ef414d82d83efdd378f4914804478c89483c14"
   },
   "buildings.xml": {
-   "bytes": 1573383,
-   "sha256": "fbff4e450ab213d4687d1756def590e4ebcee43b3ea0f0e94f697b6d8b3096f4"
+   "bytes": 1573403,
+   "sha256": "833c3ca1a1de327a5c9380e5f607cd0d5b9e643e4036cb3aa336adf0ff814ee4"
   },
   "cagedobjects.xml": {
    "bytes": 3929,
@@ -90,8 +90,8 @@
    "sha256": "9e623b8e89fdc4121137dc3a944f83c33b8cfdfb2e2233d4ade975a0844a798d"
   },
   "cluster/world.xml": {
-   "bytes": 13331186,
-   "sha256": "6a5050f847b48f59c3dc6b1e0da0f075b88e7afddaba3b25460ab2705865d8ef"
+   "bytes": 13331185,
+   "sha256": "f3a347e2a6eb374d25f1f3feac868b45c579c6edded986a65a57454c4e535a12"
   },
   "corrupteddungeons.xml": {
    "bytes": 5430,
@@ -102,16 +102,16 @@
    "sha256": "85dadee62cfa30bb4e2459891b6d2d4e272d2801372f3ac73b36c9364c5e730a"
   },
   "crystalleague.xml": {
-   "bytes": 714244,
-   "sha256": "aac29eb12ffb9008077101e18def91ea77e2f62155fe6c7999fcafeef66a38a4"
+   "bytes": 874935,
+   "sha256": "2acde1e55bde2b5533a598017206023fd34c4836750074d77b6dac45d8ee4079"
   },
   "crystalleague_asia.xml": {
-   "bytes": 699601,
-   "sha256": "26984e0bab14ba0d3e57d6b3fc312156e29b8be539a4bb9cb4d4f6049859e186"
+   "bytes": 858995,
+   "sha256": "f6aa075f88fcd9a3d66031481710751f53233ad048b32b48617a9194c75de6d0"
   },
   "crystalleague_europe.xml": {
-   "bytes": 699140,
-   "sha256": "e43c557c99e46a28b12deeca0d5ffd8dbd8610c8bb2ff7877b40d07cd9f6a9f8"
+   "bytes": 858526,
+   "sha256": "ac249398ae8c3c944c7b215f2cc3c4c025a9970c55029cc2478c81f607861b1d"
   },
   "crystalrealmgvg.xml": {
    "bytes": 3374,
@@ -126,8 +126,8 @@
    "sha256": "7b87cefd7dbeaf98b04a7c7ebdd455551b9bcca50c736be322accea78eb6d624"
   },
   "dragonareatemplatemetadata.xml": {
-   "bytes": 8500,
-   "sha256": "06b5e136d229282cc99c9b2fd9444857f3d25d4d6af1cc337c98982814ffb867"
+   "bytes": 8565,
+   "sha256": "0283f685ccdbaad09d335f775e58c6fd8190271b8f5670bd9fff7d59048b1e0a"
   },
   "dynamicclusters.xml": {
    "bytes": 188250,
@@ -186,8 +186,8 @@
    "sha256": "249f55840ff1fb8739f414749736f1a6c1f0d1e62930dc5174ab4fb9d14b56b1"
   },
   "festivities.xml": {
-   "bytes": 39954,
-   "sha256": "ba90585df737970666581ec33e799f74b1241a60f9dfdc96e95fde7ed7c43c04"
+   "bytes": 40370,
+   "sha256": "adaf4efc4af6718cdd81bfef74efe90a5c0b6a11ae4e430e42ca5afe00ab038d"
   },
   "fortificationguards.xml": {
    "bytes": 4777,
@@ -222,16 +222,16 @@
    "sha256": "ec9395bcd5f19ca70056b59bd5b8bf463503552ea0f65261083e04d9b169d1ca"
   },
   "gvgseasons.xml": {
-   "bytes": 642606,
-   "sha256": "2033103655af1825269115a5b31ab7c603bd6789d17907ffd8ab0fb743b2bd8b"
+   "bytes": 661783,
+   "sha256": "ec8c5f15834c85b4e9a7ce5bdbeeca7c123b08d6982ab974cec0321339e0ea5c"
   },
   "gvgseasons_asia.xml": {
-   "bytes": 312974,
-   "sha256": "ab3bfd78dddcb93ff9a64410081ab18accd6ba4bbc5fad41f3aedf80f23a751b"
+   "bytes": 334486,
+   "sha256": "be8c381e758cd09f684e533cac6f7d44a8bfe01f210b906773f97420b11695e4"
   },
   "gvgseasons_europe.xml": {
-   "bytes": 230349,
-   "sha256": "4e49241b491acb0060d201d330e46f90f2fe7d7444086294a45c113e9d26a108"
+   "bytes": 249388,
+   "sha256": "39fb56313d3b6e87eb43b84c54a37fc73d64ab53a9ea01ee3a4c6f7ce52d7f49"
   },
   "harvestables.xml": {
    "bytes": 577904,
@@ -254,16 +254,16 @@
    "sha256": "51309e22f00eaff9aa33342f4fca8c7e73ecec5acd1c98554a726ebaa1759c41"
   },
   "hints.xml": {
-   "bytes": 161173,
-   "sha256": "e7e61eec6b9b0e6947fb0f269e609d21cc9a59cd1967fa2e91aa3afcc64e02a1"
+   "bytes": 161489,
+   "sha256": "2abcc9cceac2c3e8ff9f79fa581eb30db1b9c6605ac884f582dee8eb783c6411"
   },
   "itemroles.xml": {
    "bytes": 6714,
    "sha256": "a6d1dd57085c0b8de1b912ec53ef9482407ba08cd0bf15b7e38fafd8469c72fc"
   },
   "items.xml": {
-   "bytes": 10799621,
-   "sha256": "764ec005d2ed31d896bdc76018112f028c91d7aa443b51b0d4ced52174820fc1"
+   "bytes": 10805318,
+   "sha256": "933b82c47cb27ec6801f126bc4f22abb942a3c8898b4c409be2b5067692419cf"
   },
   "killemotes.xml": {
    "bytes": 4956,
@@ -282,8 +282,8 @@
    "sha256": "4a4fb17e01f318289884abef4688ba30a0b6c61117fe0b71b68dc7ff3738f953"
   },
   "localization.xml": {
-   "bytes": 78423908,
-   "sha256": "1648736cc29415ab276928939d0800599dcf8e5e9fd1a1a36a88c14dc77ed06f"
+   "bytes": 78632573,
+   "sha256": "c28507be0b019626612758c73ae721a2c33098a2257aa107dd70840dca586b73"
   },
   "localquests.xml": {
    "bytes": 29439,
@@ -294,20 +294,20 @@
    "sha256": "350f72154014f4d8c0cb0f17747d8a6615ff052d82fc712710c9973782dfe5bb"
   },
   "loot.xml": {
-   "bytes": 2231456,
-   "sha256": "e138e75e3cf27730332a4328c1e6bfac5ee37799842f32214ffa7021ddb8c693"
+   "bytes": 2272837,
+   "sha256": "d2ea2dab274c0c661b7f435dedd7143aee84461f4b9ece3bcf769434df36243d"
   },
   "lootchests.xml": {
-   "bytes": 1048518,
-   "sha256": "b3742732b58190578828aeb71493e24798534151435da47c241a08fac310b8be"
+   "bytes": 1048516,
+   "sha256": "a27b97d0557cc363c10a661ce869803ae17fe37c632533b7e55a92ce19b9ae60"
   },
   "lore.xml": {
    "bytes": 8538,
    "sha256": "e18092a4c9e2435e1e806e6d0174efc9f85fff0191763e4cd4083259af92e0e4"
   },
   "matchtypes.xml": {
-   "bytes": 17443,
-   "sha256": "9ff6dfb08ff568901a87342a7715ecfff1f77ebf264ab37d15410ea97ffa5529"
+   "bytes": 16118,
+   "sha256": "42420ff7930d80644aa1605e90a6c047acf5e2ab1d2ea7a7199d6493819e1ab9"
   },
   "minimapgendata.xml": {
    "bytes": 405684,
@@ -330,8 +330,8 @@
    "sha256": "8fb0559fb9890bd2b8bbb5b8c5d6e339160f42e33813bd3ac070586294402e05"
   },
   "mobs.xml": {
-   "bytes": 12552509,
-   "sha256": "ec1a681979b0ee0bf60a37c2f9409a57e5c610c14d5b5ba0fd8689ea88ce5d67"
+   "bytes": 12549502,
+   "sha256": "1b0317977195059e8572e7f2199ce265ad891ff9c9533c27a77e7a4c2ea4e489"
   },
   "moderationpunishmentescalation.xml": {
    "bytes": 18036,
@@ -370,8 +370,8 @@
    "sha256": "7bec7e2661782998e495a9d15305af15cea03f81356ded2eed648ec09609589d"
   },
   "personalseasons.xml": {
-   "bytes": 37121,
-   "sha256": "3ad6962913396c40fa0c1be7d39fc6eb19a6615edb6e51713a6e502380c7fdc4"
+   "bytes": 36880,
+   "sha256": "d9383e77977d3ceb34936908fe1dbd8bac2aa3625d016f5d79ef7fce723bb0fb"
   },
   "piledobjects.xml": {
    "bytes": 9427,
@@ -398,20 +398,20 @@
    "sha256": "6189ab27a8855ad3dbb49a4770569a9b5270c685332751e96e2a258a9e3eaffe"
   },
   "progressiontables.xml": {
-   "bytes": 105630,
-   "sha256": "61593f3bc8e1fdd38a2b6470df45c1a43734c5ca9c0b2a7dc7b5266eadefa94d"
+   "bytes": 105480,
+   "sha256": "66ef9d46f1cca5f70bac75ccda3d13306984c63b28a32dee9f5d2cb17d31eed9"
   },
   "pvpchallenge.xml": {
-   "bytes": 275583,
-   "sha256": "ad4b4cd61b9f3ec22cd0eb6e9aa8d5ac8c2ede7fc9653b2a4a325b272177bf6e"
+   "bytes": 278384,
+   "sha256": "dc1cc51d689169117ef1724ee132e098599479b845c01fa3c1504e481456c514"
   },
   "pvpchallenge_asia.xml": {
-   "bytes": 264793,
-   "sha256": "f524e34ba644c2c082340fd3ffcfd774ee1fc4c2b4a2555578ffac9d33ac7358"
+   "bytes": 267690,
+   "sha256": "b485b50697afdf9480bdb2c0e0c6d43c40672e54529073ef6de53a58abb4b76e"
   },
   "pvpchallenge_europe.xml": {
-   "bytes": 246678,
-   "sha256": "39f45b3172191d7a953e88955567e7ae6829d5579c102b1886aa82951851be45"
+   "bytes": 249575,
+   "sha256": "15e9055543925148d03485f86685d20eece23c291dcdad74e4c03b1930878a09"
   },
   "questgiverobjects.xml": {
    "bytes": 6774,
@@ -478,8 +478,8 @@
    "sha256": "e67412505940969f83de7bef24c3a4cc27ef8d05dc51a293a9758b46c2b6ad9f"
   },
   "spells.xml": {
-   "bytes": 9377585,
-   "sha256": "90795a003ed37224670a95e7bb47d6c6ac44741177df83eeb3c2a515171e353d"
+   "bytes": 9394499,
+   "sha256": "d524508cae018de664c3a05b02495faec490cbbb168fbbfef931c7c18d55fbf6"
   },
   "standings.xml": {
    "bytes": 5743,
@@ -506,16 +506,16 @@
    "sha256": "1fa914cfa13b40c5493806c86a7813aff19884cd5dc7ee17cd856a7bc7bae294"
   },
   "times.xml": {
-   "bytes": 12252,
-   "sha256": "b3135e12d3e77b140f724891b224691fee9b922d4919a743a5277f8be17af381"
+   "bytes": 12426,
+   "sha256": "8c81283230580aae2e9a598a95293b3f1c7a175a4b33933bec78476a635da296"
   },
   "times_asia.xml": {
-   "bytes": 12175,
-   "sha256": "9d707a416316ad3a87db94e7f418d88ce5378e2bbd7d99d74a48c67898a78ccf"
+   "bytes": 12349,
+   "sha256": "9b253bbd4cbfb2ea4f460a794e3e7851f134ff13fc18f6a32d9e8a4b35c1126e"
   },
   "times_europe.xml": {
-   "bytes": 12329,
-   "sha256": "8074b621d9d237dcf3e70daee737515e61c92f9bc9d2361d0609667c49da60df"
+   "bytes": 12503,
+   "sha256": "aa9253304f602e86341730f1c3f63872e8a83273d167b3bb8b48f9edd1619fcd"
   },
   "transformations.xml": {
    "bytes": 20541,
@@ -523,15 +523,15 @@
   },
   "treasuredistribution.xml": {
    "bytes": 772883,
-   "sha256": "27d988b14255a49f035d8c86dd6baa0d45360aa72979874442810d765e6d5bbf"
+   "sha256": "1b1a849051a344f6bd8e76129e6598e68ceadaca6b5f53abf7ee9ac58a811d53"
   },
   "treasuredistribution_asia.xml": {
    "bytes": 773217,
-   "sha256": "a66dd3a02a39a6edfe2a67ea76352704c703db1ae15128afc3b54e891c5d24fb"
+   "sha256": "e9a1419404b9f5e7a35b1168e4ed4841f7de3a7e031d49d2d7e1b1a69ee50835"
   },
   "treasuredistribution_europe.xml": {
    "bytes": 772815,
-   "sha256": "f3f360df365aefacfcfd131f6fd2c68ee8b41ba1439f1a3c84fe67e13d56c8f2"
+   "sha256": "f22f510e1ea6bb70e415c8ce556cf0ce09a6305dcb8a38d3e2412d91715631a0"
   },
   "treasures.xml": {
    "bytes": 9933,
@@ -546,8 +546,8 @@
    "sha256": "b6f00f8ec628df095fb5fadcf234cf56758ad65c181d2c7adea1abc5d9fe8c93"
   },
   "vfxprefabdata.xml": {
-   "bytes": 77968,
-   "sha256": "e4864ec795ca7732a876a7725a6211a40a4d35a79f792582112b822ee9d11159"
+   "bytes": 78058,
+   "sha256": "64a99bb78302a1cd27b75c0b7b0e41f912f1a196287348e8d8bcc7c85c7d8a52"
   },
   "visualevents.xml": {
    "bytes": 451,
@@ -586,6 +586,6 @@
    "sha256": "f06a859484b1fad1fc7ed899ff775a75a17741c4f37e1f7d8b3c817682aa6cf2"
   }
  },
- "generatedAt": "2026-11-02T10:10:24+00:00",
- "version": "1.32.040.346594"
+ "generatedAt": "2026-11-26T10:12:30+00:00",
+ "version": "1.32.050.348616"
 }
